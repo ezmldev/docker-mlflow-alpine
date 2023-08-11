@@ -8,7 +8,7 @@ on:
       - 'v*'
   pull_request:
     branches:
-      - 'master'
+      - 'main'
 jobs:
 
   docker:
@@ -25,7 +25,7 @@ jobs:
           images: |
             ghcr.io/${{ github.repository_owner }}/mlflow
           tags: |
-            type=edge,branch=master
+            type=edge,branch=main
             type=sha,enable=true,prefix=git-,format=short
             type=ref,event=branch
             type=ref,event=pr
