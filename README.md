@@ -6,16 +6,22 @@ This is an alpine base mlflow image.
 - The alpine based is smaller (~800MB)
 - default entrypoint starts model serving
 
+## TODO
+
+[ ] pin mlflow version
+[ ] use matching tag version
+[ ] default entrypoint should start tracking server
+
 ## Usage
 
 Model can be provide from a named volume:
 ```
-docker run -d -p 5000:5000 -v model:/model ezmlops/mlflow
+docker run -d -p 5000:5000 -v model:/model ghcr.io/ezmlops/mlflow
 ```
 
 Or even from a local dir
 ```
-docker run -d -p 5000:5000 -v $PWD/my-model:/model ezmlops/mlflow
+docker run -d -p 5000:5000 -v $PWD/my-model:/model ghcr.io/ezmlops/mlflow
 ```
 
 ```
