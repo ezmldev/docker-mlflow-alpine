@@ -16,12 +16,12 @@ This is an alpine base mlflow image.
 
 Model can be provide from a named volume:
 ```
-docker run -d -p 5000:5000 -v model:/model ghcr.io/ezmlops/mlflow
+docker run -d -p 5000:5000 -v model:/model ghcr.io/ezmldev/mlflow
 ```
 
 Or even from a local dir
 ```
-docker run -d -p 5000:5000 -v $PWD/my-model:/model ghcr.io/ezmlops/mlflow
+docker run -d -p 5000:5000 -v $PWD/my-model:/model ghcr.io/ezmldev/mlflow
 ```
 
 ```
