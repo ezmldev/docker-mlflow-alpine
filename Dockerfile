@@ -7,7 +7,8 @@ RUN pip install pydantic==1.10.9 mlflow==2.6.0
 COPY start.sh /
 RUN chmod 755 /start.sh
 
-ENV PORT=5000
+ENV MLFLOW_PORT=5000
+ENV MLFLOW_SERVICE_TYPE="tracking"
 ENV MLFLOW_MODEL_URI=/model
 EXPOSE 5000
 CMD [ "/start.sh" ]
